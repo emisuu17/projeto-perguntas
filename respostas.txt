@@ -1,3 +1,7 @@
+### npx serve .(para rodar o local host)
+
+
+
 1-No metodo draw() na classe ArrayContainer é um for tradicional. Ele começa no indice zero e continua enquanto o for menor que a capacidade total do array.Como usa a capacidade como limite, mostra todas as posicoes disponiveis, mesmo as que ainda estao vazias.
 O segundo loop usa o metodo forEach(). Esse array contem os quadrados que ja foram adicionados. Por isso, o loop percorre somente os elementos existentes e chama o metodo draw() de cada quadrado para desenha-lo no canvas, incluindo seu valor.
 Assim, o primeiro loop apresenta todas as posicoes do array, e o segundo desenha os elementos armazenados nele.

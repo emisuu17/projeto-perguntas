@@ -1,1 +1,8 @@
-1-
+1-No metodo draw() na classe ArrayContainer é um for tradicional. Ele começa no indice zero e continua enquanto o for menor que a capacidade total do array.Como usa a capacidade como limite, mostra todas as posicoes disponiveis, mesmo as que ainda estao vazias.
+O segundo loop usa o metodo forEach(). Esse array contem os quadrados que ja foram adicionados. Por isso, o loop percorre somente os elementos existentes e chama o metodo draw() de cada quadrado para desenha-lo no canvas, incluindo seu valor.
+Assim, o primeiro loop apresenta todas as posicoes do array, e o segundo desenha os elementos armazenados nele.
+
+
+3-Nao. A busca binaria exige que os elementos estejam ordenados, mas o array atual apenas coloca cada novo elemento na proxima posicao livre, sem ordenar os valores.
+para um array cheio com dez elementos, a busca sequencial pode precisar de ate dez comparações.Para um array cheio com mil elementos, a busca sequencial pode precisar de ate mil comparações. A busca binaria, se os elementos estivessem ordenados, poderia precisar de ate dez comparações.
+

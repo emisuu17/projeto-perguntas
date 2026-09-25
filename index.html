@@ -13,8 +13,9 @@
     <form id="form-valor" class="flex items-center gap-2">
       <input id="input-valor" type="number" required placeholder="Valor" class="border px-2 py-1">
       <button type="submit" class="border px-3 py-1 bg-white">Confirmar</button>
-
-      <button type="button" onclick="ordenarArray()">Ordenar array</button>
+      <button type="button" id="btn-ordenar" class="border px-3 py-1 bg-white">
+        Ordenar array
+      </button>
     </form>
 
     <p id="mensagem" class="text-sm h-5"></p>
@@ -22,6 +23,6 @@
     <canvas id="canvas" width="800" height="260" class="bg-white"></canvas>
   </main>
 
-  <script src="app.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>

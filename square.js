@@ -25,6 +25,7 @@ export class Square {
 
     this.progress = Math.min(this.progress + deltaTime / this.duration, 1);
     const t = Square.easeOutCubic(this.progress);
+
     this.x = this.startX + (this.targetX - this.startX) * t;
     this.y = this.startY + (this.targetY - this.startY) * t;
   }

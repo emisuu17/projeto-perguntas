@@ -34,11 +34,18 @@ export class CanvasApp {
     return this.array.add(value, x, y);
   }
 
+  addValueOrdered(value) {
+    const { x, y } = this.spawnPoint;
+    return this.array.addOrdered(value, x, y);
+  }
+
   loop(time) {
     const deltaTime = time - this.lastTime;
     this.lastTime = time;
+
     this.array.update(deltaTime);
     this.draw();
+
     requestAnimationFrame((nextTime) => this.loop(nextTime));
   }
 

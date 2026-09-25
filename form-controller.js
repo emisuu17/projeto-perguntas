@@ -5,11 +5,14 @@ export class FormController {
     this.message = message;
     this.app = app;
 
-    this.form.addEventListener("submit", (event) => this.handleSubmit(event));
+    this.form.addEventListener("submit", (event) => {
+      this.handleSubmit(event, false);
+    });
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
+  handleSubmit(event, ordered = false) {
+    if (event) event.preventDefault();
+
     const value = Number(this.input.value);
 
     if (this.input.value === "" || Number.isNaN(value)) {
@@ -17,14 +20,18 @@ export class FormController {
       return;
     }
 
-    const square = this.app.addValue(value);
+    const square = ordered
+      ? this.app.addValueOrdered(value)
+      : this.app.addValue(value);
+
     if (!square) {
       this.showMessage("O array está cheio.");
       return;
     }
 
-    const index = this.app.array.items.length - 1;
+    const index = this.app.array.items.indexOf(square);
     this.showMessage(`Valor ${value} inserido no índice ${index}.`);
+
     this.input.value = "";
     this.input.focus();
   }

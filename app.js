@@ -134,7 +134,7 @@ class ArrayContainer {
       ctx.textAlign = "center";
       ctx.textBaseline = "top";
       ctx.fillText(`[${i}]`, x + this.cellSize / 2, this.y + this.height + 9);
-    }
+    };
 
     // Quadrados
     this.items.forEach((item) => item.draw(ctx));
